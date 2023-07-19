@@ -6,6 +6,7 @@ use Exception;
 use App\Models\User;
 use App\Mail\OTPMail;
 use App\Helper\JWTToken;
+use Illuminate\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -125,4 +126,8 @@ class UserController extends Controller
         }
     }// end method
 
+    // Pages
+    function LoginPage():View{
+        return view('pages.auth.login-page');
+    }// end method
 }
